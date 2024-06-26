@@ -1,7 +1,7 @@
 from .base import *
 import environs
 
-env = environs.Env
+env = environs.Env()
 
 env.read_env(str(BASE_DIR / '.env'))
 
