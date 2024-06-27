@@ -2,7 +2,6 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 # Application definition
 DEFAULT_APPS = ["django.contrib.admin",
     "django.contrib.auth",
@@ -13,6 +12,7 @@ DEFAULT_APPS = ["django.contrib.admin",
     ]
 CUSTOM_APPS = [
     # USER DEFINED APPS
+    "apps.reader"
 ]
 THIRD_PARTY_APPS = [
     # EXTERNAL APPS
@@ -82,3 +82,5 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+AUTH_USER_MODEL = 'reader.Reader'
