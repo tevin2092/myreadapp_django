@@ -5,7 +5,7 @@ dev-install:
 	pip install -r requirements/dev.txt
 
 dev-m:
-	python3 manage.py migrate --settings=config.settings.dev
+	python3 manage.py migrate reader zero --settings=config.settings.dev
 
 dev-makem:
 	python3 manage.py makemigrations --settings=config.settings.dev
@@ -19,3 +19,5 @@ dev-sqlm:
 dev-dbshell:
 	python3 manage.py dbshell --settings=config.settings.dev
 
+dev-shell:
+	python3 manage.py shell --settings=config.settings.dev

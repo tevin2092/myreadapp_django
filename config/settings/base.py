@@ -1,7 +1,7 @@
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # Application definition
 DEFAULT_APPS = ["django.contrib.admin",
     "django.contrib.auth",
@@ -12,7 +12,10 @@ DEFAULT_APPS = ["django.contrib.admin",
     ]
 CUSTOM_APPS = [
     # USER DEFINED APPS
-    "apps.reader"
+    "apps.reader",
+    "apps.book",
+    "apps.myread",
+    "apps.core",
 ]
 THIRD_PARTY_APPS = [
     # EXTERNAL APPS

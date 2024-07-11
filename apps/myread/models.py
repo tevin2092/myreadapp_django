@@ -57,6 +57,8 @@ class MyRead(models.Model):
 
         ]
 
+    def __str__(self) ->str:
+        return f"Reader: {self.reader_username}--Book: {self.book_isbn}--progress({self.percentage_read}%)"
 
 class StatusPercent(models.Model):
     SP_CHOICE ={
@@ -71,6 +73,8 @@ class StatusPercent(models.Model):
     )
     read_status = models.CharField(max_length=10, choices=SP_CHOICE, default='pending')
 
+   
+    
     class Meta:
         constraints = [
             models.CheckConstraint(
@@ -80,7 +84,8 @@ class StatusPercent(models.Model):
         ]
 
 
-
+    def __str__(self) ->str:
+        return f"{self.percentage_read_range}({self.read_status})"
 
 
 
